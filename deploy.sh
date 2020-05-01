@@ -1,6 +1,6 @@
-docker build -t mbhuiyan13/multi-container-client:latest -t mbhuiyan13/multi-container-client:$SHA ./client/Dockerfile ./client
-docker build -t mbhuiyan13/multi-container-server:latest -t mbhuiyan13/multi-container-server:$SHA ./server/Dockerfile ./server
-docker build -t mbhuiyan13/multi-container-worker:latest -t mbhuiyan13/multi-container-worker:$SHA ./worker/Dockerfile ./worker
+docker build -t mbhuiyan13/multi-container-client:latest -t mbhuiyan13/multi-container-client:$SHA -f ./client/Dockerfile ./client
+docker build -t mbhuiyan13/multi-container-server:latest -t mbhuiyan13/multi-container-server:$SHA -f ./server/Dockerfile ./server
+docker build -t mbhuiyan13/multi-container-worker:latest -t mbhuiyan13/multi-container-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push mbhuiyan13/multi-container-client:latest
 docker push mbhuiyan13/multi-container-server:latest
